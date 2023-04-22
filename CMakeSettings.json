@@ -1,0 +1,69 @@
+﻿{
+  "configurations": [
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": ""
+    },
+    {
+      "name": "x64-Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "variables": [
+        {
+          "name": "dlib_DIR",
+          "value": "C:/Users/bobhope/Documents/College Work/CSCI 24000/predict/dlibRelease/lib/cmake/dlib",
+          "type": "PATH"
+        }
+      ]
+    },
+    {
+      "name": "x64-Debug-CUDA",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "variables": [
+        {
+          "name": "dlib_DIR",
+          "value": "C:/Users/bobhope/Documents/College Work/CSCI 24000/predict/dlibDebugCUDA/lib/cmake/dlib",
+          "type": "PATH"
+        }
+      ]
+    },
+    {
+      "name": "x64-Release-CUDA",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "variables": [
+        {
+          "name": "dlib_DIR",
+          "value": "C:/Users/bobhope/Documents/College Work/CSCI 24000/predict/dlibReleaseCUDA/lib/cmake/dlib",
+          "type": "PATH"
+        }
+      ]
+    }
+  ]
+}
