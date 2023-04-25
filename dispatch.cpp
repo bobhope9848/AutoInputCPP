@@ -12,6 +12,7 @@
 
 
 
+
 //Prototypes
 std::vector<frames> loadData(std::string dirPath);
 unsigned long translateCtrls(std::string fileName);
@@ -20,12 +21,13 @@ bool compareFileNum(dlib::file file1, dlib::file file2);
 
 
 //Globals
-std::vector<frames> inputDataset = loadData("C:/Users/yusuke/Documents/College Work/CSCI 24000/predict/data/train");
-std::vector<frames> validationSet = loadData("C:/Users/yusuke/Documents/College Work/CSCI 24000/predict/data/validate");
+std::vector<frames> inputDataset = loadData("C:/Users/bobhope/Documents/College Work/CSCI 24000/AutoInputCPP/data/train");
+std::vector<frames> validationSet = loadData("C:/Users/bobhope/Documents/College Work/CSCI 24000/AutoInputCPP/data/validate");
 
 int main()
 {
 	std::cout << "Test holy fuck" << std::endl;
+	
 	train::train(inputDataset, validationSet);
 	return 0;
 }
@@ -47,8 +49,8 @@ std::vector<frames> loadData(std::string dirPath)
 			//Get all files
 			files.clear();
 			files = session.get_files();
-			std::sort(files.begin(), files.end(), compareFileNum);
-			for (auto img : files)
+			//std::sort(files.begin(), files.end(), compareFileNum);
+			for (dlib::file img : files)
 			{
 				//Calls translateCtrls and returns vector float array.
 				unsigned long ctrls = translateCtrls(img.name());

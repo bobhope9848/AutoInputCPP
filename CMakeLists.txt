@@ -6,9 +6,9 @@ set(dlib_DIR "${CMAKE_CURRENT_SOURCE_DIR}/dlibDebug/lib/cmake/dlib/" PATH)
 
 
 #find_package(OpenCV REQUIRED COMPONENTS opencv_highgui)
-find_package(dlib REQUIRED PATHS ${CMAKE_CURRENT_SOURCE_DIR}/dlibDebug/lib/cmake/dlib/)
+#find_package(dlib REQUIRED PATHS ${CMAKE_CURRENT_SOURCE_DIR}/dlibDebug/lib/cmake/dlib/)
 #find_package(dlib REQUIRED PATHS ${CMAKE_CURRENT_SOURCE_DIR}/dlibRelease/lib/cmake/dlib/)
-#find_package(dlib REQUIRED PATHS ${CMAKE_CURRENT_SOURCE_DIR}/dlibDebugCUDA/lib/cmake/dlib/)
+find_package(dlib REQUIRED PATHS ${CMAKE_CURRENT_SOURCE_DIR}/dlibDebugCUDA/lib/cmake/dlib/)
 #find_package(dlib REQUIRED PATHS ${CMAKE_CURRENT_SOURCE_DIR}/dlibReleaseCUDA/lib/cmake/dlib/)
 
 add_executable(predict 
@@ -17,8 +17,8 @@ add_executable(predict
 	"frames.h"
 	"train.h"
 	"train.cpp"
-	"testing.cpp"
-	"testing.h"
+	#"testing.cpp"
+	#"testing.h"
 )
 	# "testing.cpp" "model.cpp" "model.h" "testing.h")
 

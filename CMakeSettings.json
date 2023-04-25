@@ -42,7 +42,7 @@
       "variables": [
         {
           "name": "dlib_DIR",
-          "value": "C:/Users/bobhope/Documents/College Work/CSCI 24000/predict/dlibDebugCUDA/lib/cmake/dlib",
+          "value": "C:/Users/bobhope/Documents/College Work/CSCI 24000/AutoInputCPP/dlibDebugCUDA/lib/cmake/dlib",
           "type": "PATH"
         }
       ]
@@ -60,7 +60,7 @@
       "variables": [
         {
           "name": "dlib_DIR",
-          "value": "C:/Users/bobhope/Documents/College Work/CSCI 24000/predict/dlibReleaseCUDA/lib/cmake/dlib",
+          "value": "C:/Users/bobhope/Documents/College Work/CSCI 24000/AutoInputCPP/dlibReleaseCUDA/lib/cmake/dlib",
           "type": "PATH"
         }
       ]
