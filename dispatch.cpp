@@ -9,6 +9,7 @@
 #include <array>
 #include "frames.h"
 #include "train.h"
+#include "testing.h"
 
 
 
@@ -26,9 +27,9 @@ std::vector<frames> validationSet = loadData("C:/Users/bobhope/Documents/College
 
 int main()
 {
-	std::cout << "Test holy fuck" << std::endl;
-	
-	train::train(inputDataset, validationSet);
+	std::cout << "Initilizing" << std::endl;
+	train trainer(inputDataset);
+	testing tester(validationSet);
 	return 0;
 }
 
@@ -67,30 +68,7 @@ std::vector<frames> loadData(std::string dirPath)
 	return imgs;
 }
 
-//TODO: Remove
-//OBSOLETE CODE
 
-/*
-std::vector<int> translateCtrlsVector(std::string fileName)
-{
-	std::string holder;
-	std::vector<std::string> substringArray = split(fileName, 'a');
-
-	holder = substringArray[1];
-	holder.erase(holder.end()-4, holder.end());
-	std::string binaryeqv = std::bitset<8>(std::stoi(holder)).to_string();
-	
-	std::vector<int> binaryArray;
-	for( int i = 0; i < binaryeqv.length(); i++)
-	{
-		//Subtract ascii value of '0' from ascii value of binaryeqv[i]
-		binaryArray.push_back((binaryeqv[i]) - '0');
-	}
-
-	return binaryArray;
-
-}
-*/
 
 unsigned long translateCtrls(std::string fileName)
 {
@@ -99,7 +77,8 @@ unsigned long translateCtrls(std::string fileName)
 
 	holder = substringArray[1];
 	holder.erase(holder.end() - 4, holder.end());
-	std::string binaryeqv = std::bitset<8>(std::stoi(holder)).to_string();
+	//std::string binaryeqv = std::bitset<8>(std::stoi(holder)).to_string();
+	std::string binaryeqv = holder;
 
 	return std::stoul(binaryeqv);
 

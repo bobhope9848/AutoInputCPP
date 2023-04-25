@@ -6,40 +6,34 @@
 #include <vector>
 #include "include/resnet.h"
 #include "frames.h"
+#include "model.h"
 using namespace dlib;
 
-class testing
+class testing : Model
 {
 private:
 
 	INPUT inputs[4];
+	INPUT ip;
 
 protected:
 
 public:
-    static enum ValidInputs
-		{
-			left,
-			right,
-			up,
-			down,
-			start,
-			select,
-			a,
-			b,
-			begin,
-			end
-		};
 
-	testing();
 
-    testing(std::vector<frames> testingFrames);
 
-    std::vector<ValidInputs> predict(std::string modelLoc);
+	std::string ValidInputs[10] = { "left", "right", "up", "down", "start", "select", "a", "b", "begin", "end" };
 
-	void emuHarness(std::vector<ValidInputs> inputs);
+	testing(std::vector<frames> testingFrames);
 
-	void releaseCtrls();
+	void predict(std::vector<frames> predictionFrames);
+
+	void emuHarness(std::string input, bool releaseMode);
+
+
+	//std::vector<rgb_pixel> grabScreen();
+
+	void testing::printControls(std::string binaryCtrls);
 
 
 

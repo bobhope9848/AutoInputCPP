@@ -17,8 +17,10 @@ add_executable(predict
 	"frames.h"
 	"train.h"
 	"train.cpp"
-	#"testing.cpp"
-	#"testing.h"
+	"testing.cpp"
+	"testing.h"
+	"model.cpp"
+	"model.h"
 )
 	# "testing.cpp" "model.cpp" "model.h" "testing.h")
 
